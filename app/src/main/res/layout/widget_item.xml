@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_item"
+    android:layout_width="match_parent"
+    android:layout_weight="1"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/widget_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/add_widget"
+        android:src="@drawable/welcome_page" />
+
+    <TextView
+        android:id="@+id/widget_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/widget_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/dark_gray" />
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "44893851576",
+    "firebase_url": "https://capstonestage2-bbf0f.firebaseio.com",
+    "project_id": "capstonestage2-bbf0f",
+    "storage_bucket": "capstonestage2-bbf0f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:44893851576:android:401690bfc83068df",
+        "android_client_info": {
+          "package_name": "tasneem.kurraz.com.capstone_stage2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "44893851576-ca4hgo90543cuhtqcclcacsa9mcar1u0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tasneem.kurraz.com.capstone_stage2",
+            "certificate_hash": "6242f8188f40b96e8892e0c95b097a317ce86940"
+          }
+        },
+        {
+          "client_id": "44893851576-mt8sbjaic3b6mctdgaqog6evej0c1lb9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNaEJsVhUL18byRnF2wAeTKPWhXsdhM-U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "44893851576-mt8sbjaic3b6mctdgaqog6evej0c1lb9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
