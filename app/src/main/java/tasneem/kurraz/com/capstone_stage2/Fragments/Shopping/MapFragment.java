@@ -179,7 +179,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleA
         String knownName = addresses.get(0).getFeatureName(); // Only if available else return NULL
 
 
-        return String.format(address, getResources().getString(R.string.comma),city,getResources().getString(R.string.comma),country);
+        return address+ getResources().getString(R.string.comma)+city+getResources().getString(R.string.comma)+country;
     }
 
 

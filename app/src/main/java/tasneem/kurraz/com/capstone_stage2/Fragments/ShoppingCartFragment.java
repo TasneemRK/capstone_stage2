@@ -108,7 +108,7 @@ public class ShoppingCartFragment extends Fragment {
                                 Double price = Double.parseDouble(product.getProduct_price());
                                 int quant = product.getQuantity();
                                 totalPrice += price * quant;
-                                tprice.setText(String.format(String.valueOf(tprice),getResources().getString(R.string.dollar)));
+                                tprice.setText(totalPrice + getResources().getString(R.string.dollar));
                             }
                             adapter.notifyDataSetChanged();
                         }

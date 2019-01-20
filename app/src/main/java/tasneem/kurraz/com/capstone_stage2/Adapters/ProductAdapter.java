@@ -47,7 +47,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final ProductViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
         if (mproducts.get(position).isFav()){
             holder.addToFav.setImageDrawable(context.getResources().getDrawable(R.drawable.fav_after));
         }else {

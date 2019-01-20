@@ -1,6 +1,5 @@
 package tasneem.kurraz.com.capstone_stage2.Adapters;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.net.Uri;
 import android.support.annotation.NonNull;
@@ -48,7 +47,6 @@ public class ShoppingAdapter extends RecyclerView.Adapter<ShoppingAdapter.Shppin
         return new ShppingViewHolder(LayoutInflater.from(context).inflate(R.layout.shopping_cart_item,viewGroup,false));
     }
 
-    @SuppressLint("StringFormatInvalid")
     @Override
     public void onBindViewHolder(@NonNull ShppingViewHolder holder, int position) {
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -60,8 +58,8 @@ public class ShoppingAdapter extends RecyclerView.Adapter<ShoppingAdapter.Shppin
 
         Picasso.get().load(Uri.parse(products.get(position).getProduct_image())).fit().into(holder.shop_image);
         holder.shop_name.setText(products.get(position).getProduct_name());
-        holder.shop_price.setText(String.format(products.get(position).getProduct_price(),context.getResources().getString(R.string.dollar)));
-        holder.shop_quantity.setText(String.format(context.getResources().getString(R.string.quantity),String.valueOf(products.get(position).getQuantity()),context.getResources().getString(R.string.peice)));
+        holder.shop_price.setText(products.get(position).getProduct_price()+ context.getResources().getString(R.string.dollar));
+        holder.shop_quantity.setText(context.getResources().getString(R.string.quantity) + String.valueOf(products.get(position).getQuantity())+ context.getResources().getString(R.string.peice));
         holder.remove.setOnClickListener(view ->
                 reference.child(products.get(position).getId()).removeValue((databaseError, databaseReference) ->
                         Toast.makeText(context, context.getResources().getString(R.string.remove), Toast.LENGTH_SHORT).show()));

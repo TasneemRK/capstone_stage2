@@ -7,6 +7,8 @@ public class User {
     private String phone;
     private String image;
 
+    public User() {
+    }
 
     public User(String email, String username, String phone) {
         this.email = email;

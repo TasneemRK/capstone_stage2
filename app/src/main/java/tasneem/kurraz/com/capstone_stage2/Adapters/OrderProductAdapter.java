@@ -1,6 +1,5 @@
 package tasneem.kurraz.com.capstone_stage2.Adapters;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.net.Uri;
 import android.support.annotation.NonNull;
@@ -38,13 +37,12 @@ public class OrderProductAdapter extends RecyclerView.Adapter<OrderProductAdapte
         return new OrderProductViewHolder(LayoutInflater.from(context).inflate(R.layout.order_produvt_item,viewGroup,false));
     }
 
-    @SuppressLint("StringFormatInvalid")
     @Override
     public void onBindViewHolder(@NonNull OrderProductViewHolder holder, int position) {
         Picasso.get().load(Uri.parse(products.get(position).getProduct_image())).fit().into(holder.order_product_image);
         holder.order_product_name.setText(products.get(position).getProduct_name());
-        holder.order_product_price.setText(String.format(products.get(position).getProduct_price(),context.getResources().getString(R.string.dollar)));
-        holder.order_product_quantity.setText(String.format(context.getResources().getString(R.string.quantity),String.valueOf(products.get(position).getQuantity()),context.getResources().getString(R.string.peice)));
+        holder.order_product_price.setText(products.get(position).getProduct_price()+context.getResources().getString(R.string.dollar));
+        holder.order_product_quantity.setText(context.getResources().getString(R.string.quantity)+ String.valueOf(products.get(position).getQuantity())+context.getResources().getString(R.string.peice));
     }
 
 
